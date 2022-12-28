@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: user
+  datasource:
+    username: 'vlogiversecode'
+    url: jdbc:postgresql://localhost:5433/user
+    password: 'password'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    show-sql: 'true'
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
